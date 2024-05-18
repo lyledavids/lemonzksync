@@ -1,0 +1,154 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "tweetId",
+        "type": "uint256"
+      }
+    ],
+    "name": "AddTweet",
+    "type": "event",
+    "signature": "0x8b2db9b424f26463510ef5b02c16f2465836b52081b51d2112ec76102053bdea"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "tweetId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "isDeleted",
+        "type": "bool"
+      }
+    ],
+    "name": "DeleteTweet",
+    "type": "event",
+    "signature": "0x2430f837dd2fb40e08c064be9db3d0cf2a7a21f8fe716a2a41787dafc66a7e2a"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "tweetText",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "isDeleted",
+        "type": "bool"
+      }
+    ],
+    "name": "addTweet",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xe580339f"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tweetId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "isDeleted",
+        "type": "bool"
+      }
+    ],
+    "name": "deleteTweet",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf0312a37"
+  },
+  {
+    "inputs": [],
+    "name": "getAllTweets",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "username",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "tweetText",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "isDeleted",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct Lemon.Tweet[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true,
+    "signature": "0x53256135"
+  },
+  {
+    "inputs": [],
+    "name": "getMyTweets",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "username",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "tweetText",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "isDeleted",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct Lemon.Tweet[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true,
+    "signature": "0xaefedbc2"
+  }
+]
